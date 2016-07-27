@@ -33,5 +33,10 @@ div.maincontent {
   width: 95%;
   overflow: auto;
   height: 500px;
+  padding: 15px;
+}
+
+.message {
+  margin: 5px;
 }
 
