@@ -26,6 +26,7 @@ var Messages = (function(userMessage){
          <span class="messageContent"> ${inputText.value} </span>
          <button class="deleteBtn"> Delete </button>
        </div>`
+       inputText.value = "";
       }
     })
   }
