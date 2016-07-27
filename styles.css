@@ -1,0 +1,26 @@
+.navBar {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+.textInput {
+  width: 60%;
+}
+.icon {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.clearBtn {
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.checkboxes {
+  margin-left: 20%;
+}
+
+input, label {
+  margin-right: 10px;
+}
