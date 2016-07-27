@@ -27,13 +27,13 @@ input, label {
 }
 
 div.maincontent {
-  margin:auto;
-  margin-top: 5rem;
+  margin: 5rem auto;
   border: 1px solid black;
   width: 95%;
   overflow: auto;
   height: 500px;
   padding: 15px;
+  position: fixed;
 }
 
 .message {

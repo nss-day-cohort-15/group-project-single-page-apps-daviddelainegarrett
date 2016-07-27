@@ -11,9 +11,26 @@ var Messages = (function(userMessage){
        <button class="deleteBtn"> Delete </button>
        </div>`
     })
+    addMessages()
   }
   Messages.getMessages(populateMessages);
-  // function addMessages (userInput) {
 
-  // }
+  function addMessages (userInput) {
+    var inputText = document.querySelector(".textInput");
+    var messageArea = document.querySelector(".maincontent")
+    inputText.addEventListener("keypress", (e)=>{
+      var key = e.which || e.keyCode;
+      if (key === 13) {
+        messageArea.innerHTML +=
+        `<div class="message">
+         <span class="messageContent"> ${inputText.value} </span>
+         <button class="deleteBtn"> Delete </button>
+       </div>`
+      }
+    })
+  }
+
 })(Messages || {})
+
+
+
