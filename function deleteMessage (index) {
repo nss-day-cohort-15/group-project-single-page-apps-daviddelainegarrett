@@ -1,6 +1,0 @@
-function deleteMessage (index) {
-  // deletes messsage from the array
-  messageArray.splice(index, 1)
-  // deletes message from the dom
-  querySeelctor(#index).remove()
-}
