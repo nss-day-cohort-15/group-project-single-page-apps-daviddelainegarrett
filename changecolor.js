@@ -22,7 +22,7 @@ var Messages = (function(userMessage){
 
     }
     //Change the background color function
-    function backgroundColor (){
+    userMessage.backgroundColor = function(){
         var backgroundColors = document.querySelectorAll(".bg");
             backgroundColors.forEach((bgColor) => {
               if(bgColor.checked){
@@ -35,7 +35,7 @@ $(document).ready(function(){
         var saveButton = document.getElementById("saveTheme");
         saveButton.addEventListener("click", (e)=>{
             $('#myModal').modal('hide');
-            backgroundColor();
+            userMessage.backgroundColor();
             userMessage.fontColor();
     });
   });
