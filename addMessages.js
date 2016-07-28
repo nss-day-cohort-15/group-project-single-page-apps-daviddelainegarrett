@@ -7,7 +7,7 @@ var Messages = (function(userMessage){
       messageArea.innerHTML +=
       `<div class="message" id="message-${index}">
        <span class="messageContent"> ${message.message} </span>
-       <button class="deleteBtn"> Delete </button>
+       <button class="deleteBtn btn btn-danger"> Delete </button>
        </div>`
        inputText.value = "";
     })
