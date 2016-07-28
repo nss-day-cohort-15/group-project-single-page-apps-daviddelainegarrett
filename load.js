@@ -7,7 +7,7 @@ return {
       xhr.open('GET', 'messages.JSON')
       xhr.addEventListener('load', function () {
         //this === xhr
-        messageArray = JSON.parse(xhr.responseText)
+        messageArray = JSON.parse(xhr.responseText).messages
         cb(messageArray)
       })
       xhr.send()

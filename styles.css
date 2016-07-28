@@ -50,5 +50,13 @@ div.darkmaincontent {
   overflow: auto;
   height: 500px;
   padding: 15px;
+}
 
+.darkmaincontent button {
+  color: black;
+}
+
+.disabled {
+  background-color: red;
+  color: white;
 }

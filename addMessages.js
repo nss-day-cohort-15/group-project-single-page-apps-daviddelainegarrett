@@ -2,24 +2,29 @@ var Messages = (function(userMessage){
 
   function populateMessages (messageArray) {
     var container = document.querySelector(".maincontent");
-    var messages = messageArray.messages
-    messages.forEach((message)=>{
+    messageArray.forEach((message)=>{
       container.innerHTML +=
       `<div class="message">
        <span class="messageContent"> ${message.message} </span>
        <button class="deleteBtn"> Delete </button>
        </div>`
     })
-    userMessage.addMessages()
+    userMessage.addMessages(messageArray)
+    userMessage.clearMessages()
+    userMessage.disableButton()
+    userMessage.deleteMessages(messageArray)
   }
   Messages.getMessages(populateMessages);
 
-  userMessage.addMessages = function() {
+  userMessage.addMessages = function(messageArray) {
     var inputText = document.querySelector(".textInput");
     var messageArea = document.querySelector(".maincontent")
     inputText.addEventListener("keypress", (e)=>{
       var key = e.which || e.keyCode;
       if (key === 13) {
+        messageArray.push({message: inputText.value})
+        console.log(messageArray)
+        console.log(e)
         messageArea.innerHTML +=
         `<div class="message">
          <span class="messageContent"> ${inputText.value} </span>
@@ -29,7 +34,7 @@ var Messages = (function(userMessage){
       }
       userMessage.disableButton()
       userMessage.clearMessages()
-      userMessage.deleteMessages()
+      userMessage.deleteMessages(messageArray)
     })
   }
 
