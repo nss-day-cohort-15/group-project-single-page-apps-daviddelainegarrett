@@ -30,6 +30,7 @@ var Messages = (function(userMessage){
       }
       userMessage.disableButton(messageArray)
       userMessage.clearMessages(messageArray)
+      userMessage.fontColor()
     })
   }
 

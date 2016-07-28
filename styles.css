@@ -51,22 +51,6 @@ div.maincontent {
   margin: 5px;
 }
 
-div.darkmaincontent {
-  color: white;
-  background-color: black;
-  margin:auto;
-  margin-top: 5rem;
-  border: 1px solid white;
-  width: 95%;
-  overflow: auto;
-  height: 500px;
-  padding: 15px;
-}
-
-.darkmaincontent button {
-  color: black;
-}
-
 div.getbig {
   font-size: 2em;
 }
