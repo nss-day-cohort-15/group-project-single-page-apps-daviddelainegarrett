@@ -6,8 +6,8 @@ var Messages = (function(userMessage){
     messages.forEach((message)=>{
       container.innerHTML +=
       `<div class="message">
-       <span class="messageContent"> ${message.message} </span>
-       <button class="deleteBtn"> Delete </button>
+       <span class="messageContent table table-hover"> ${message.message} </span>
+       <button type ="button" class="deleteBtn btn btn-danger"> Delete </button>
        </div>`
     })
     userMessage.addMessages()
@@ -23,7 +23,7 @@ var Messages = (function(userMessage){
         messageArea.innerHTML +=
         `<div class="message">
          <span class="messageContent"> ${inputText.value} </span>
-         <button class="deleteBtn"> Delete </button>
+         <button type ="button" class="deleteBtn btn btn-danger"> Delete </button>
        </div>`
        inputText.value = "";
       }

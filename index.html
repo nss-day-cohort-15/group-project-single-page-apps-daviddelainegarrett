@@ -6,13 +6,14 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header class="navBar">
+<div class="container-fluid">
+<header class="navBar row">
   <nav>
     <img src="images/icon.png" class="icon">
       <input type="text" name="messages" class="textInput" placeholder = "Enter a message here...">
-      <button class="clearBtn">Clear Message Board</button>
+      <button class="clearBtn btn btn-primary">Clear Message Board</button>
   </nav>
-  <div class="checkboxes">
+  <div class="checkboxes" class="row">
         <input type="checkbox" name="darkTheme" id="darkTheme">
         <label for="darkTheme">Dark Theme</label>
         <input type="checkbox" name="largeText" id="largeText">
@@ -23,8 +24,23 @@
 
 </section>
   <h1>Messages:</h1>
-  <div class="maincontent">
+  <tbody class="table table-hover">
+  <div class="maincontent ">
 
+  </div>
+  </tbody>
+  <footer>
+    <address>
+    <strong>Chatty, Inc.</strong>
+      500 Interstate Blvd, #300
+      Nashville, TN, 37210
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+
+    <address>
+      <a href="mailto:#">info@chatty.com</a>
+    </address>
+  </footer>
   </div>
 <script type="text/javascript" src="load.js"></script>
 <script type="text/javascript" src="deleteMessages.js"></script>
