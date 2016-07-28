@@ -21,6 +21,7 @@ var Messages = (function(userMessage){
           messageArea.innerHTML = "";
           userMessage.populateMessages(messageArray)
           userMessage.disableButton(messageArray)
+          userMessage.fontColor()
         })
       })
     }
