@@ -11,9 +11,6 @@ return {
         cb(messageArray)
       })
       xhr.send()
-    },
-      getArray: function(){
-        return messageArray;
     }
   }
 })(Messages||{})

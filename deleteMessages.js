@@ -1,8 +1,10 @@
 
 var Messages = (function(userMessage){
+  var messageArea = document.querySelector(".maincontent")
+  var deleteBtns = document.querySelectorAll(".deleteBtn");
+  var clearButton = document.querySelector('.clearBtn');
 
   userMessage.disableButton = function (messageArray){
-    var clearButton = document.querySelector('.clearBtn');
       if(messageArray.length === 0) {
         // console.log("There are no messages")
         clearButton.setAttribute("disabled", true)
@@ -13,8 +15,6 @@ var Messages = (function(userMessage){
 
   userMessage.deleteMessages = function (messageArray){
     // console.log("index", messageArray)
-    var messageArea = document.querySelector(".maincontent")
-    var deleteBtns = document.querySelectorAll(".deleteBtn");
       deleteBtns.forEach((deleteBtn)=>{
         deleteBtn.addEventListener("click", (e)=>{
           console.log(e);
@@ -33,8 +33,6 @@ var Messages = (function(userMessage){
     }
 
   userMessage.clearMessages = function(messageArray){
-    var messageArea = document.querySelector(".maincontent");
-      var clearButton = document.querySelector('.clearBtn');
       clearButton.addEventListener("click", (e)=>{
         var messages = document.querySelectorAll(".message");
         messages.forEach((message)=>{
