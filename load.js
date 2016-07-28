@@ -6,7 +6,6 @@ return {
       var xhr = new XMLHttpRequest()
       xhr.open('GET', 'messages.JSON')
       xhr.addEventListener('load', function () {
-        //this === xhr
         messageArray = JSON.parse(xhr.responseText).messages
         cb(messageArray)
       })
