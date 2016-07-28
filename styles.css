@@ -1,11 +1,18 @@
-
+#myModal {
+  z-index: 2000;
+}
+.changeTheme {
+  background-color: #aaa;
+  border-color: #aaa;
+  font-size: 1.5rem;
+}
 .navBar {
   padding-top: 1em;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   background-color: #fff;
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 1rem;
 
 }
 .textInput {
@@ -23,7 +30,7 @@
 }
 
 .checkboxes {
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 input, label {
@@ -31,8 +38,8 @@ input, label {
 }
 
 div.maincontent {
-  position:fixed;
-  margin: 5rem auto;
+  /*position:fixed;*/
+  margin: 2rem auto;
   border: 1px solid black;
   width: 95%;
   overflow: auto;
@@ -68,7 +75,7 @@ footer {
   padding-top: 1rem;
   background-color: #efefef;
   text-align: center;
-  position: fixed;
+  /*position: fixed;*/
   right: 0;
   bottom: 0;
   left: 0;
@@ -76,5 +83,8 @@ footer {
   margin-top:1em;
 }
 
+.deleteBtn {
+  font-size: 1rem;
+}
 
 

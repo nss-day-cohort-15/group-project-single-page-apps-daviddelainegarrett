@@ -1,5 +1,4 @@
 var Messages = (function(userMessage){
-    console.log(userMessage)
     var messageArea = document.querySelector(".maincontent");
     var inputText = document.querySelector(".textInput");
 
