@@ -13,17 +13,67 @@
       <input type="text" name="messages" class="textInput" placeholder = "Enter a message here...">
       <button class="clearBtn btn btn-primary">Clear Message Board</button>
   </nav>
-  <div class="checkboxes" class="row">
-        <input class="checkbox-inline" type="checkbox" name="darkTheme" id="darkTheme">
-        <label class="checkbox-inline" for="darkTheme">Dark Theme</label>
-        <input class="checkbox-inline" type="checkbox" name="largeText" id="largeText">
-        <label class="checkbox-inline" for="largeText">Large Text</label>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg changeTheme" data-toggle="modal" data-target="#myModal">
+  Change Theme
+</button>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Custom Theme</h4>
       </div>
+      <div class="modal-body">
+        <table style="width: 100%">
+          <thead>
+            <th><h3>Background Colors</h3></th>
+            <th><h3>Font Colors</h3></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgWhite" value="white" class="bg"><label for="bgWhite">White</label></td>
+              <td><input type="radio" name="fcColor" id="fcBlack" value="black" class="fc"><label for="fcBlack">Black</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgBlue" value="DodgerBlue" class="bg"><label for="bgBlue">Dodger Blue</label></td>
+              <td><input type="radio" name="fcColor" id="fcWhite" value="white" class="fc"><label for="fcWhite">White</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgIndigo" value="indigo" class="bg"><label for="bgIndigo">Indigo</label></td>
+              <td><input type="radio" name="fcColor" id="fcLightBlue" value="LightBlue" class="fc"><label for="fcLightBlue">Light Blue</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgSeaGreen" value="SeaGreen" class="bg"><label for="bgSeaGreen">Sea Green</label></td>
+              <td><input type="radio" name="fcColor" id="fcViolet" value="violet" class="fc"><label for="fcViolet">Violet</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgTomato" value="tomato" class="bg"><label for="bgTomato">Tomato</label></td>
+              <td><input type="radio" name="fcColor" id="fcGreenYellow" value="GreenYellow" class="fc"><label for="fcGreenYellow">Green Yellow</label></td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="bgColor" id="bgGold" value="gold" class="bg"><label for="bgGold">Gold</label></td>
+              <td><input type="radio" name="fcColor" id="fcNavy" value="navy" class="fc"><label for="fcNavy">Navy</label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveTheme">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="checkboxes" class="row">
+      <input class="checkbox-inline" type="checkbox" name="largeText" id="largeText">
+      <label class="checkbox-inline" for="largeText">Large Text</label>
+  </div>
 </header>
 <section>
 <div class="emptyDiv col-md-1"></div>
 </section>
-  <h1>Messages:</h1>
+  <h3>Messages</h3>
   <tbody class="table table-hover">
   <div class="maincontent col-md-10">
 
@@ -40,7 +90,8 @@
     </address>
   </footer>
   </div>
-<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="load.js"></script>
 <script type="text/javascript" src="deleteMessages.js"></script>
 <script type="text/javascript" src="addMessages.js"></script>

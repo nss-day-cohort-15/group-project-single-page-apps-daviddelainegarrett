@@ -1,5 +1,4 @@
 var Messages = (function(userMessage){
-    console.log(userMessage)
     var messageArea = document.querySelector(".maincontent");
     var inputText = document.querySelector(".textInput");
 
@@ -31,6 +30,7 @@ var Messages = (function(userMessage){
       }
       userMessage.disableButton(messageArray)
       userMessage.clearMessages(messageArray)
+      userMessage.fontColor()
     })
   }
 
