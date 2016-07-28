@@ -28,26 +28,27 @@ var Messages = (function(userMessage){
         messageArray.splice(actualIndex, 1);
         console.log("???", messageArray)
         messageArea.innerHTML = "";
+        userMessage.populateMessages(messageArray)
         userMessage.disableButton(messageArray)
       })
     })
 
   }
 
-  userMessage.clearMessages = function(){
+  userMessage.clearMessages = function(messageArray){
     var messageArea = document.querySelector(".maincontent");
-    if(messageArea.innerHTML !== "") {
       var clearButton = document.querySelector('.clearBtn');
       clearButton.addEventListener("click", (e)=>{
-        var messages = document.querySelectorAll(".message")
+        var messages = document.querySelectorAll(".message");
         messages.forEach((message)=>{
           message.remove();
-          userMessage.disableButton(messageArray)
-          userMessage.deleteMessages()
+       });
+        messageArray.splice(0, messageArray.length);
+        userMessage.disableButton(messageArray)
+        userMessage.deleteMessages(messageArray)
+        userMessage.populateMessages(messageArray)
       });
-    });
   }
-}
 
 
   return userMessage;

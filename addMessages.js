@@ -5,7 +5,7 @@ var Messages = (function(userMessage){
     var inputText = document.querySelector(".textInput");
     messageArray.forEach((message, index)=>{
       container.innerHTML +=
-      `<div class="message>
+      `<div class="message">
        <span class="messageContent"> ${message.message} </span>
        <button class="deleteBtn" id="message-${index}"> Delete </button>
        </div>`
@@ -13,7 +13,7 @@ var Messages = (function(userMessage){
     })
     userMessage.deleteMessages(messageArray)
     userMessage.addMessages(messageArray)
-    userMessage.clearMessages()
+    userMessage.clearMessages(messageArray)
     userMessage.disableButton(messageArray)
   }
   Messages.getMessages(userMessage.populateMessages);
@@ -31,13 +31,11 @@ var Messages = (function(userMessage){
         }
       }
       userMessage.disableButton(messageArray)
-      userMessage.clearMessages()
+      userMessage.clearMessages(messageArray)
       userMessage.deleteMessages(messageArray)
     })
   }
 
    return userMessage;
 })(Messages || {})
-
-
 
