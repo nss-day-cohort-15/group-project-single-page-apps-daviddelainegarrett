@@ -20,6 +20,9 @@ var Messages = (function(userMessage){
 
   userMessage.addMessages = function(messageArray) {
     inputText.addEventListener("keypress", (e)=>{
+      var milliseconds = (new Date).getTime();
+      var time = milliseconds + e.timeStamp
+      console.log(time)
       var key = e.which || e.keyCode;
       if (key === 13) {
         if (inputText.value !== "") {
