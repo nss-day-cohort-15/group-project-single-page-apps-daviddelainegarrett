@@ -6,7 +6,7 @@ var Messages = (function(userMessage){
     messageArray.forEach((message, index)=>{
       messageArea.innerHTML +=
       `<div class="message" id="message-${index}">
-       <span class="messageContent"> ${message.message} </span>
+       <span class="messageContent"> <strong> ${message.name}: </strong> ${message.message} </span>
        <button class="deleteBtn btn btn-danger"> Delete </button>
        </div>`
        inputText.value = "";
@@ -23,11 +23,16 @@ var Messages = (function(userMessage){
       var key = e.which || e.keyCode;
       if (key === 13) {
         if (inputText.value !== "") {
-          messageArray.push({message: inputText.value})
-          messageArea.innerHTML = "";
-          userMessage.populateMessages(messageArray)
-        }
+        var users = document.querySelectorAll('.users');
+        users.forEach((user)=>{
+          if(user.checked){
+            messageArray.push({name: user.value, message: inputText.value})
+            messageArea.innerHTML = "";
+            userMessage.populateMessages(messageArray)
+          }
+        })
       }
+    }
       userMessage.disableButton(messageArray)
       userMessage.clearMessages(messageArray)
       userMessage.fontColor()
