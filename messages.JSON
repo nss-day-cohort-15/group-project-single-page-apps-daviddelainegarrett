@@ -1,18 +1,23 @@
 {
   "messages": [
     {
+      "name": "Joanna",
       "message": "Welcome to the wonderful world of  Chatty."
     },
     {
+      "name": "Xavier",
       "message": "Chatty is an interactive 'chatting' website application that will allow you to communicate with friends quickly!"
     },
     {
+      "name": "Sven",
       "message": "You can always learn more about Chatty by visiting our website that will keep you up to date on any new changes."
     },
     {
+      "name": "Gunter",
       "message": "Go ahead and follow Chatty on Twitter as well @Chatty."
     },
     {
+      "name": "Iveta",
       "message": "Silence is not golden."
     }
   ]
